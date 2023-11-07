@@ -43,6 +43,8 @@ def create_page(request):
     valid = True
     if request.method == 'POST':
         qwery_data = request.POST
-        commit.commit_profile(qwery_data)
-        return redirect(reverse('main_page'), permanent=True)
-    return render(request, 'meeter/index_create.html', {'title': 'Create'})
+        valid = vl.valid_profile(qwery_data)
+        if valid:
+            commit.commit_profile(qwery_data)
+            return redirect(reverse('main_page'), permanent=True)
+    return render(request, 'meeter/index_create.html', {'title': 'Create', 'valid': valid})
