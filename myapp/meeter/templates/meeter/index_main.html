@@ -1,0 +1,22 @@
+{% extends 'meeter/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="navi">
+        <a href="{% url 'create_page' %}">Create profile</a>
+    </div>
+    {% for user_data in data %}
+        <div class="user_card">
+            <img class="user_img" src="{% static 'meeter/img/user_img.jpg' %}">
+            <div class="user_info">
+                <h5>User data</h5>
+                <span>
+                    <p>Name: {{ user_data.name }}</p>
+                    <p>Name: {{ user_data.surname }}</p>
+                    <p>Name: {{ user_data.sex }}</p>
+                    <a href="{{ user_data.get_absolute_url }}">About...</a>
+                </span>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

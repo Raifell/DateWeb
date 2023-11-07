@@ -1,0 +1,21 @@
+{% extends 'meeter/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="user_box">
+        <img src="{% static 'meeter/img/user_img.jpg' %}">
+        <h5>User complete data</h5>
+        <span>
+            <p>Name: {{ data.name }}</p>
+            <p>Name: {{ data.surname }}</p>
+            <p>Name: {{ data.sex }}</p>
+            <p>Name: {{ data.country }}</p>
+            <p>Name: {{ data.hobby }}</p>
+            <p>Name: {{ data.like_food }}</p>
+            <p>Name: {{ data.like_music }}</p>
+            <p>Name: {{ data.like_book }}</p>
+            <p>Name: {{ data.like_game }}</p>
+            <p>{{ user_data.get_absolute_url }}</p>
+        </span>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'meeter/layout.html' %}
+
+{% block content %}
+    <div class="login">
+        <p>Не допускаются специальные символы в поле "Login", Пароль должен содержать минимум 8 символов.</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="login" placeholder="Login">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="repassword" placeholder="Repeat password">
+            <input type="email" name="email" placeholder="Email">
+            <button type="submit">Register</button>
+        </form>
+        {% if not valid %}
+            <h6>Не корректные данные!</h6>
+        {% endif %}
+    </div>
+{% endblock %}

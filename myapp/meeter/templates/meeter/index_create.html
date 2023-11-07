@@ -1,0 +1,23 @@
+{% extends 'meeter/layout.html' %}
+
+{% block content %}
+    <div class="profile_form">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="surname" placeholder="Surname">
+            <input type="date" name="age">
+            <select name="sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input type="text" name="country" placeholder="Country">
+            <input type="text" name="hobby" placeholder="Hobby">
+            <input type="text" name="like_food" placeholder="Like Food">
+            <input type="text" name="like_music" placeholder="Like Music">
+            <input type="text" name="like_book" placeholder="Like Book">
+            <input type="text" name="like_game" placeholder="Like Food">
+            <button type="submit">Create</button>
+        </form>
+    </div>
+{% endblock %}
