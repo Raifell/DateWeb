@@ -22,7 +22,7 @@ def valid_register(qwery):
 
 
 def valid_profile(qwery):
-    valid = True
+    valid = False
     primary_pattern = lambda x: bool(re.compile(r'[a-zA-Zа-яА-ЯйЙёЁ\s-]').match(x))
     bmg_pattern = lambda x: bool(re.compile(r'[a-zA-Zа-яА-ЯйЙёЁ\s0-9-]').match(x))
 
