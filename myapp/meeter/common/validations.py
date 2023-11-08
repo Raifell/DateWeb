@@ -12,7 +12,7 @@ def valid_register(qwery):
     if qwery['password'] != qwery['repassword']:
         valid = False
 
-    if len(qwery['password']) < 7 and len(qwery['repassword']) < 7:
+    if len(qwery['password']) < 5 and len(qwery['repassword']) < 5:
         valid = False
 
     if CountUser.objects.filter(login=qwery['login']) or CountUser.objects.filter(email=qwery['email']):

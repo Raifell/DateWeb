@@ -3,7 +3,7 @@
 {% block content %}
     <div class="profile_form">
         {% if not valid %}
-            <h6 style="color:red">Не корректные данные!</h6>
+            <h6 style="color:red">Некорректные данные!</h6>
         {% endif %}
         <form method="post">
             {% csrf_token %}
@@ -19,7 +19,7 @@
             <input type="text" name="like_food" placeholder="Like Food">
             <input type="text" name="like_music" placeholder="Like Music">
             <input type="text" name="like_book" placeholder="Like Book">
-            <input type="text" name="like_game" placeholder="Like Food">
+            <input type="text" name="like_game" placeholder="Like Game">
             <button type="submit">Create</button>
         </form>
     </div>
